@@ -17,3 +17,6 @@ Create a Word Guess command-line game using constructor functions.
 - The game is over when - the guessing player completes the word. Or the guessing player has used 5 guesses.
 
 - Console.log messages are color coded to help users.
+
+## Output
+![node-index-js-word-game-output.jpg](https://raw.githubusercontent.com/radhikabgupta/ReadMeInfoProj2/master/assets/node-index-js-word-game-output.jpg)
