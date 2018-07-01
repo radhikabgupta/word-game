@@ -18,5 +18,6 @@ Create a Word Guess command-line game using constructor functions.
 
 - Console.log messages are color coded to help users.
 
-## Output
+## Word-Game in Action
+1. commande: node index.js
 ![node-index-js-word-game-output.jpg](https://raw.githubusercontent.com/radhikabgupta/ReadMeInfoProj2/master/assets/node-index-js-word-game-output.jpg)
