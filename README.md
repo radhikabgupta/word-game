@@ -20,4 +20,5 @@ Create a Word Guess command-line game using constructor functions.
 
 ## Word-Game in Action
 1. commande: node index.js
-![node-index-js-word-game-output.jpg](https://raw.githubusercontent.com/radhikabgupta/ReadMeInfoProj2/master/assets/node-index-js-word-game-output.jpg)
+![word-game-play-again.jpg](https://raw.githubusercontent.com/radhikabgupta/word-game/master/assets/images/word-game-play-again.jpg)
+![word-game-duplicate-no.jpg](https://raw.githubusercontent.com/radhikabgupta/word-game/master/assets/images/word-game-duplicate-no.jpg)
