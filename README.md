@@ -19,6 +19,6 @@ Create a Word Guess command-line game using constructor functions.
 - Console.log messages are color coded to help users.
 
 ## Word-Game in Action
-1. commande: node index.js
+commande: node index.js
 ![word-game-play-again.jpg](https://raw.githubusercontent.com/radhikabgupta/word-game/master/assets/images/word-game-play-again.jpg)
 ![word-game-duplicate-no.jpg](https://raw.githubusercontent.com/radhikabgupta/word-game/master/assets/images/word-game-duplicate-no.jpg)
