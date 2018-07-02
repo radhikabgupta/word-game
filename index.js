@@ -2,14 +2,48 @@ var Word = require('./word');
 var RandomWord = require('./game');
 var inquirer = require('inquirer');
 const chalk = require('chalk');
+
 var gussesRemaining = 5;
 var pastGuesses = [];
-
 var guessesWrong = 0;
+var MyWord;
+var newWord;
 
-var MyWord = new Word();
-var newWord = RandomWord.getRandomWord();
-MyWord.setWord(newWord);
+
+function initGame(){
+    gussesRemaining = 5;
+    pastGuesses = [];
+    guessesWrong = 0;
+    MyWord = new Word();
+    newWord = RandomWord.getRandomWord();
+
+    MyWord.displayWord();
+    MyWord.setWord(newWord);
+}
+
+function playAgain(){
+inquirer
+  .prompt([
+    {
+      type: "confirm",
+      message: "\n\nDo you want to play again? :",
+      name: "confirm",
+      default: true
+    }
+  ])
+  .then(function(inquirerResponse) {
+    if (inquirerResponse.confirm) {
+        console.log("\n\nLet's play again!");
+        initGame();
+        playGame();
+    }
+    else {
+      console.log("\nThank you for playing!\n");
+    }
+  }
+);
+}
+
 
 function playGame() {
     if ((gussesRemaining > 0) && (!MyWord.isComplete())) {
@@ -40,15 +74,18 @@ function playGame() {
     } else {
         if (MyWord.isComplete()) {
             MyWord.displayWord() ;
-            console.log(chalk.green.bold(' You Win! CONGRATULATIONS!!'));
+            console.log(chalk.green.bold(' You Win! CONGRATULATIONS!!')); 
+            playAgain();         
         } else {
             console.log(chalk.red.bold(' GAME  OVER!!'));
             console.log(chalk.red.bold(" The correct word was: "+ newWord));
+            playAgain();
         }
-        gussesRemaining = 5;
+
     }
 }
 
+initGame();
 playGame();
 
 
